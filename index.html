@@ -16,7 +16,7 @@ document.getElementById('metamask').innerHTML = 'You need <a href="https://metam
 getvalue();
 }
 //function to retrieve the last inserted value on the blockchain
-function getvalue() {
+function showBalance() {
     try {
         // contract Abi defines all the variables,constants and functions of the smart contract. replace with your own abi
         var abi = [
@@ -50,7 +50,7 @@ function getvalue() {
 	}
         ]
         //contract address. please change the address to your own
-        var contractaddress = '0xc80cae7c51f27bc25b3862d072d56fa84965f5c1';
+        var contractaddress = '0xe8c65bf53Ad0d3915FAa3ADB03AEAAC54F69F2F9';
         //instantiate and connect to contract address via Abi
         var myAbi = web3.eth.contract(abi);
         var myfunction = myAbi.at(contractaddress);
@@ -122,7 +122,7 @@ function setvalue() {
 
     <center>
         <div id="metamask"></div>
-        <h3>Insert and retrieve value on the blockchain</h3>
+        <h3>show Insert and retrieve value on the blockchain</h3>
         <br />
         <table>
             <tr>
@@ -142,4 +142,3 @@ function setvalue() {
     </center>
 </body>
 </html>
-
